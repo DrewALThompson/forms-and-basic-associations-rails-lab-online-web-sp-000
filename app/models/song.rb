@@ -20,5 +20,6 @@ class Song < ActiveRecord::Base
   end 
   
   def notes_content=(content)
+    notes_content.each do |content|
   
 end
