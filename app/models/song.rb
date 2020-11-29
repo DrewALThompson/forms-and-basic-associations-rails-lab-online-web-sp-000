@@ -30,6 +30,7 @@ class Song < ActiveRecord::Base
     self.notes.each do |note|
       note.content ? notes << note.content : nil
     end
+    notes
   end 
   
 end
