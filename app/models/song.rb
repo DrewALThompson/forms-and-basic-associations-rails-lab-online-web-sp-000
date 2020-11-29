@@ -26,11 +26,11 @@ class Song < ActiveRecord::Base
   end 
   
   def note_contents
-    notes = []
+    ret = []
     self.notes.each do |note|
-      !note.content.empty? ? notes << note.content : nil
+      ret << note.content unless note.content.empty?
     end
-    notes
-  end 
+    ret
+  end
   
 end
